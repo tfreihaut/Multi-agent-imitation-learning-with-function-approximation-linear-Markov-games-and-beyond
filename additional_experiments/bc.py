@@ -177,7 +177,6 @@ class BehavioralCloningSingleAgent:
                 eta=eta
             )
         elif cnn_policy:
-            # TODO: adjust in_channels as needed (maybe take state shape as input)
             self.policy_net = SmallCNN(in_channels=3, num_actions=self.num_actions)
         else:
             self.policy_net = DeepSoftmaxPolicy(
