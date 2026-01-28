@@ -174,6 +174,8 @@ if __name__ == "__main__":
             if nu_E[state_idx].sum() == 0:
                 nu_E[state_idx] = nu_E_vi[state_idx]
 
+    mu_E = mu_E_vi
+    nu_E = nu_E_vi
     
     start_state = [[1, 0], [2, 1]]
     start_state_idx = grid_game.all_states.index(start_state)

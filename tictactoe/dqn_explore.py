@@ -388,7 +388,6 @@ class DeepWARMMAIL:
                             action_p1_tensor = torch.tensor(
                                 action_p1, dtype=torch.long, device=self.device
                             )
-                            # Convert to tensor, TODO: check if we need to permute channels here
                             state_preprocessed_1 = (
                                 torch.from_numpy(state["observation"])
                                 .to(dtype=torch.float32, device=self.device)
@@ -409,7 +408,6 @@ class DeepWARMMAIL:
                             self.env.step(action_p1)
 
                         elif agent == self.env.possible_agents[1]:  # player_2
-                            # Convert to tensor, TODO: check if we need to permute channels here
                             state_tensor = torch.from_numpy(state["observation"]).to(
                                 dtype=torch.float32, device=self.device
                             )
